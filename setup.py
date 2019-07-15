@@ -13,11 +13,13 @@ setup(name='td4a',
       ],
       scripts=['td4a-server'],
       install_requires=[
-          'ansible==2.4.1.0',
-          'Flask==0.12.2',
+          'ansible==2.8.2',
+          'Flask==1.1.1',
           'netaddr==0.7.19',
-          'Twisted==17.9.0',
-          'requests==2.18.4',
-          'ruamel.yaml==0.15.35'
+          'Twisted==19.2.1',
+          'requests==2.22.0',
+          'ruamel.yaml==0.15.35',
+          'genson==1.1.0',
+          'jsonschema==3.0.1'
       ],
       zip_safe=False)

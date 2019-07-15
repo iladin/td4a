@@ -7,8 +7,16 @@ RUN apk update
 RUN apk add gcc libffi-dev musl-dev openssl-dev sshpass make
 # RUN apk add py-crypto python-dev
 
+# Create td4a directory, copy files over and cd to it
+
+RUN mkdir /td4a
+
+COPY . /td4a
+
+WORKDIR "/td4a"
+
 # Install td4a
-RUN pip install td4a==1.7
+RUN python setup.py install
 
 # Clear out extras
 RUN rm -rf /var/cache/apk/*
